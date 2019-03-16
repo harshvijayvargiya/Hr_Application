@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  designation: MyString
+  joining_date: 2019-03-12
+  releiving_date: 2019-03-12
+  experience_in_years: 1
+  experience_in_months: 1
+  nature_of_work: MyString
+  role_at_work: MyString
+  reason_for_leaving: MyText
+  company_address: MyString
+  company_website: MyString
+  company_contact: MyString
+  employee: one
+
+two:
+  company_name: MyString
+  designation: MyString
+  joining_date: 2019-03-12
+  releiving_date: 2019-03-12
+  experience_in_years: 1
+  experience_in_months: 1
+  nature_of_work: MyString
+  role_at_work: MyString
+  reason_for_leaving: MyText
+  company_address: MyString
+  company_website: MyString
+  company_contact: MyString
+  employee: two

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @previous_work_detail.company_name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @previous_work_detail.designation %>
+</p>
+
+<p>
+  <strong>Joining date:</strong>
+  <%= @previous_work_detail.joining_date %>
+</p>
+
+<p>
+  <strong>Releiving date:</strong>
+  <%= @previous_work_detail.releiving_date %>
+</p>
+
+<p>
+  <strong>Experience in years:</strong>
+  <%= @previous_work_detail.experience_in_years %>
+</p>
+
+<p>
+  <strong>Experience in months:</strong>
+  <%= @previous_work_detail.experience_in_months %>
+</p>
+
+<p>
+  <strong>Nature of work:</strong>
+  <%= @previous_work_detail.nature_of_work %>
+</p>
+
+<p>
+  <strong>Role at work:</strong>
+  <%= @previous_work_detail.role_at_work %>
+</p>
+
+<p>
+  <strong>Reason for leaving:</strong>
+  <%= @previous_work_detail.reason_for_leaving %>
+</p>
+
+<p>
+  <strong>Company address:</strong>
+  <%= @previous_work_detail.company_address %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @previous_work_detail.company_website %>
+</p>
+
+<p>
+  <strong>Company contact:</strong>
+  <%= @previous_work_detail.company_contact %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @previous_work_detail.employee %>
+</p>
+
+<%= link_to 'Edit', edit_admin_previous_work_detail_path(@previous_work_detail), class: "btn btn-primary" %> |
+<%= link_to 'Back', admin_previous_work_details_path, class: "btn btn-primary" %>

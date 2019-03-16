@@ -1,0 +1,122 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.try(:name) %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @employee.gender %>
+</p>
+
+<p>
+  <strong>Data of birth:</strong>
+  <%= @employee.date_of_birth %>
+</p>
+
+<p>
+  <strong>Date of joining:</strong>
+  <%= @employee.date_of_joining %>
+</p>
+
+<p>
+  <strong>Marital status:</strong>
+  <%= @employee.marital_status %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @employee.status %>
+</p>
+
+<p>
+  <strong>Probation duration:</strong>
+  <%= @employee.probation_duration %>
+</p>
+
+<p>
+  <strong>Confirmation date:</strong>
+  <%= @employee.confirmaton_date %>
+</p>
+
+<p>
+  <strong>Personal email:</strong>
+  <%= @employee.personal_email %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @employee.mobile_number %>
+</p>
+
+<p>
+  <strong>Alternate mobile number:</strong>
+  <%= @employee.alternate_mobile_number %>
+</p>
+
+<p>
+  <strong>Blood group:</strong>
+  <%= @employee.blood_group %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @employee.about %>
+</p>
+
+<p>
+  <strong>Profile picture:</strong>
+  <% if @employee.profile_picture_url.present? %>
+    <%= image_tag @employee.profile_picture_url, width:"150", height:"150" %>
+  <% end %>
+</p>
+
+
+<p>
+  <strong>Present address:</strong>
+  <%= @employee.present_address %>
+</p>
+
+<p>
+  <strong>Permanen address:</strong>
+  <%= @employee.permanent_address %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @employee.nationality %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @employee.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @employee.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @employee.country %>
+</p>
+
+<p>
+  <strong>Is international employee:</strong>
+  <%= @employee.is_international_employee %>
+</p>
+
+<p>
+  <strong>Is physically challenged:</strong>
+  <%= @employee.is_physically_challenged %>
+</p>
+
+<p>
+  <strong>Is director:</strong>
+  <%= @employee.is_director %>
+</p>
+
+<%= link_to 'Edit', edit_admin_employee_path(@employee), class: "btn btn-primary" %> |
+<%= link_to 'Back', admin_employees_path, class: "btn btn-primary" %>

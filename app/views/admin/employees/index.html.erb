@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Employees</h1>
+<br>
+<%= link_to "Active Employee", admin_employees_path(status: 'Active'), class: "btn btn-info" %>
+
+<%= link_to "Terminated Employee", admin_employees_path(status: 'Terminated'), class: "btn btn-info" %>
+
+<%= link_to "On Notice Employee", admin_employees_path(status: 'On Notice'), class: "btn btn-info" %>
+
+<%= link_to "All Employee", admin_employees_path, class: "btn btn-info" %>
+
+<%= link_to "Show Index", admin_showindex_path , class: "btn btn-primary"%>
+
+<table>
+  <thead>
+    <tr >
+      <th>Name</th>
+      <th>Status</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+    <tr class="success">
+      <td><%= employee.name %></td>
+      <td><%= employee.status %></td>
+      <td><%= link_to 'Show', admin_employee_path(employee), class: "btn btn-primary" %></td>
+      <td><%= link_to 'Edit', edit_admin_employee_path(employee), class: "btn btn-primary" %></td>
+      <td><%= link_to 'Destroy', admin_employee_path(employee), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td><br>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employee', new_admin_employee_path, class: "btn btn-success" %>
+
+<%= select_tag(:employee_by_status, options_for_select([['Active', :Active], ['Terminated', :Terminated], ['On Notice', :On_Notice], ['All', :All]]), :prompt => 'Select a Status') %>
+
+<div id="employee_listing">
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#employee_by_status").on('change', function(){
+    value = $(this).children("option:selected").val();
+
+    $.ajax({
+      url: "<%= employee_by_status_admin_employees_url %>",
+      method:"GET",
+      data: {status: value}
+    });
+  });
+});
+</script>

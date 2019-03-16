@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Previous Work Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Designation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @previous_work_details.each do |previous_work_detail| %>
+      <tr>
+        <td><%= previous_work_detail.company_name %></td>
+        <td><%= previous_work_detail.designation %></td>
+        <td><%= link_to 'Show', admin_previous_work_detail_path(previous_work_detail), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_admin_previous_work_detail_path(previous_work_detail), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', admin_previous_work_detail_path(previous_work_detail), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Previous Work Detail', new_admin_previous_work_detail_path, class: "btn btn-success" %>

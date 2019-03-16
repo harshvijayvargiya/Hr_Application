@@ -1,0 +1,76 @@
+<%= form_for [:admin, @relative ] do |form| %>
+<% if relative.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(relative.errors.count, "error") %> prohibited this relative from being saved:</h2>
+
+  <ul>
+    <% relative.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="form-group row">
+  <div class="col-md-4 mb-3 mb-md-0">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control rounded-0", placeholder: " Name" %>
+  </div>
+
+  <div class="col-md-4 mb-3 mb-md-0">
+    <%= form.label :date_of_birth %>
+    <%= form.date_field :date_of_birth, class: "form-control rounded-0" %>
+  </div>
+
+  <div class="col-md-4 mb-3 mb-md-0">
+    <%= form.label :gender %>
+    <%= form.select :gender, options_for_select(Relative::GENDER, selected: relative.gender), { prompt: "Select Gender" }, { class: "form-control rounded-0" } %>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-md-4 mb-3 mb-md-0">
+    <%= form.label :blood_group %>
+    <%= form.select :blood_group, options_for_select(Relative::BLOODGROUP, selected: relative.blood_group), { prompt: "Select Bloodgroup" }, { class: "form-control rounded-0" } %>
+  </div>
+
+  <div class="col-md-4 mb-3 mb-md-0">
+    <%= form.label :relation %>
+    <%= form.text_field :relation, class: "form-control rounded-0", placeholder: " Relation" %>
+  </div>
+
+  <div class="col-md-4 mb-3 mb-md-0">
+    <%= form.label :profession %>
+    <%= form.text_field :profession, class: "form-control rounded-0", placeholder: " Profession" %>
+  </div>
+</div>
+
+<div class="form-group row">  
+  <div class="col-md-4 mb-3 mb-md-0">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, class: "form-control rounded-0", placeholder: " Contact" %>
+  </div>
+
+  <div class="col-md-4 mb-3 mb-md-0">
+   <%= form.label :address %>
+   <%= form.text_field :address, class: "form-control rounded-0", placeholder: "Address" %>
+ </div>
+
+ <div class="col-md-4 mb-3 mb-md-0">
+  <%= form.label :nationality %>
+  <%= form.text_field :nationality, class: "form-control rounded-0", placeholder: "Nationality" %>
+</div>
+</div>
+
+<div class="form-group row">
+  <div class="col-md-12">
+    <%= form.label :remarks %>
+    <%= form.text_area :remarks, class: "form-control rounded-0", placeholder: "Remarks", rows: "5" %>
+  </div>  
+</div>
+
+<div class="actions">
+  <%= form.submit class: "btn btn-primary" %>
+  <%= link_to 'Cancel', admin_relatives_path, class: "btn btn-outline-secondary" %>
+</div>
+<% end %>

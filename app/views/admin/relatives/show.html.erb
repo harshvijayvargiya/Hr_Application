@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @relative.name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @relative.date_of_birth %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @relative.gender %>
+</p>
+
+<p>
+  <strong>Blood group:</strong>
+  <%= @relative.blood_group %>
+</p>
+
+<p>
+  <strong>Relation:</strong>
+  <%= @relative.relation %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @relative.profession %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @relative.nationality %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @relative.address %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @relative.contact %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @relative.remarks %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @relative.employee %>
+</p>
+
+<%= link_to 'Edit', edit_admin_relative_path(@relative), class: "btn btn-primary" %> |
+<%= link_to 'Back', admin_relatives_path, class: "btn btn-primary" %>
