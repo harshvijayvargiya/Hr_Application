@@ -66,5 +66,5 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'dotenv-rails'
 gem "bulma-rails", "~> 0.7.4"
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'draper'
